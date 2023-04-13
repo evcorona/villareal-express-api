@@ -1,13 +1,16 @@
-name: Pull Request
+name: Testing
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - '*'
 
 jobs:
-  check-format:
-    name: Check format and lint
+  testing:
+    name: Run testing files
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
@@ -25,8 +28,5 @@ jobs:
           node-version: 18
           cache: pnpm
 
-      - name: Check Lint
-        run: pnpm run lint
-
-      - name: Check format
-        run: pnpm run format:check
+      - name: Run testing
+        run: pnpm run test
