@@ -6,6 +6,10 @@
   "author": "@evcorona",
   "license": "ISC",
   "main": "index.js",
+  "engines": {
+    "node": ">=18.16.0",
+    "pnpm": ">=8.2.0"
+  },
   "scripts": {
     "dev": "nodemon index.js",
     "format": "prettier --write .",

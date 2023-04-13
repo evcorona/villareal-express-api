@@ -4,5 +4,5 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.language": "en"
+  "cSpell.language": "en, es-ES"
 }
