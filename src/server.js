@@ -10,7 +10,7 @@ server.use(express.json())
 
 // Server response
 server.get('/', (request, response) => {
-  response.json({ success: true, message: 'express.api' })
+  response.json({ success: true, message: '🚀 Villarreal-express.api' })
 })
 
 module.exports = server
