@@ -13,14 +13,14 @@ const schema = new mongoose.Schema(
     },
     firstName: {
       type: String,
-      minlength: 10,
+      minlength: 1,
       lowercase: true,
       trim: true,
       required: true,
     },
     lastName: {
       type: String,
-      minlength: 10,
+      minlength: 1,
       lowercase: true,
       trim: true,
       required: true,
