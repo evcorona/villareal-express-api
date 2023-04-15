@@ -7,7 +7,7 @@ async function signup(credentials) {
 
   const passwordEncrypted = await bcrypt.hash(password, 10)
 
-  return User.create({ password: passwordEncrypted, userData })
+  return User.create({ password: passwordEncrypted, ...userData })
 }
 
 async function login(credentials) {
@@ -29,14 +29,7 @@ async function login(credentials) {
   return token
 }
 
-async function updateUser({ _id, ...userData }) {
-  return await User.findByIdAndUpdate(_id, userData, {
-    returnDocument: 'after',
-  })
-}
-
 module.exports = {
   signup,
   login,
-  updateUser,
 }
