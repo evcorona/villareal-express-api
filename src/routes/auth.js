@@ -1,9 +1,11 @@
 const express = require('express')
 const auth = require('./../usecases/auth')
+const validateAuth = require('../middlewares/auth')
+const adminAuth = require('../middlewares/adminAuth')
 
 const router = express.Router()
 
-router.post('/signup', async (req, res) => {
+router.post('/signup', validateAuth, adminAuth, async (req, res) => {
   try {
     await auth.signup(req.body)
 
