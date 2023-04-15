@@ -41,6 +41,6 @@ jobs:
           DB_TEST_URI: ${{ secrets.DB_TEST_URI }}
           TEST_USER: ${{ secrets.TEST_USER }}
           TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
-          
+
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD}}
           ADMIN_USER: ${{ secrets.ADMIN_USER }}
