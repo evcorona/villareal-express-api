@@ -2,6 +2,7 @@ const cors = require('cors')
 const express = require('express')
 
 const authRouter = require('./routes/auth')
+const houseRouter = require('./routes/house')
 
 // Server configuration
 const server = express()
@@ -12,6 +13,7 @@ server.use(express.json())
 
 // Server routes
 server.use('/auth', authRouter)
+server.use('/house', houseRouter)
 
 // Server response
 server.get('/', (request, response) => {
