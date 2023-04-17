@@ -6,12 +6,6 @@ const schema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    payments: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Income',
-      },
-    ],
     status: {
       type: String,
       default: 'deudor',
