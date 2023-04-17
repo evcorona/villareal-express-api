@@ -1,6 +1,7 @@
 const express = require('express')
+const auth = require('./../middlewares/auth')
+const adminAuth = require('./../middlewares/adminAuth')
 const house = require('./../usecases/house')
-const authMiddleware = require('./../middlewares/auth')
 
 const router = express.Router()
 
@@ -18,7 +19,7 @@ router.get('/', async (req, res) => {
   }
 })
 
-router.post('/', authMiddleware, async (req, res) => {
+router.post('/', auth, adminAuth, async (req, res) => {
   try {
     const newHouse = await house.addHouse(req.body)
 
