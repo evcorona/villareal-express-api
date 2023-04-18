@@ -40,7 +40,7 @@ const schema = new mongoose.Schema(
     },
     role: {
       type: String,
-      enum: ['tesorero', 'admin', 'cobranza'],
+      enum: ['treasurer', 'admin', 'collector'],
       required: true,
     },
     isActive: {
