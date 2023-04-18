@@ -7,9 +7,10 @@ const schema = new mongoose.Schema(
       min: 1,
       required: true,
     },
-    adminId: {
+    treasurerId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
+      required: true,
     },
     concept: {
       type: String,

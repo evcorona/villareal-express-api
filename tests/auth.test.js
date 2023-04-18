@@ -45,7 +45,7 @@ describe('PUSH /auth ', () => {
       .send({
         email: TEST_USER,
         password: TEST_PASSWORD,
-        role: 'cobranza',
+        role: 'collector',
         firstName: 'Test',
         lastName: 'Testing',
       })
@@ -63,7 +63,7 @@ describe('PUSH /auth ', () => {
       .send({
         email: TEST_USER,
         password: TEST_PASSWORD,
-        role: 'cobranza',
+        role: 'collector',
         firstName: 'Test',
         lastName: 'Testing',
       })

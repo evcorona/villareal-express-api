@@ -1,10 +1,10 @@
 const userData = require('../utils/userData')
 
-function adminAuth(request, response, next) {
+function treasurerAuth(request, response, next) {
   try {
     const user = userData(request.headers.authorization)
 
-    if (user.role !== 'admin') throw new Error('Unauthorized')
+    if (user.role !== 'treasurer') throw new Error('Unauthorized')
 
     next()
   } catch (error) {
@@ -16,4 +16,4 @@ function adminAuth(request, response, next) {
   }
 }
 
-module.exports = adminAuth
+module.exports = treasurerAuth
