@@ -4,6 +4,7 @@ const express = require('express')
 const authRouter = require('./routes/auth')
 const houseRouter = require('./routes/house')
 const expenseRouter = require('./routes/expense')
+const incomeRouter = require('./routes/income')
 
 // Server configuration
 const server = express()
@@ -16,6 +17,7 @@ server.use(express.json())
 server.use('/auth', authRouter)
 server.use('/house', houseRouter)
 server.use('/expense', expenseRouter)
+server.use('/income', incomeRouter)
 
 // Server response
 server.get('/', (request, response) => {
