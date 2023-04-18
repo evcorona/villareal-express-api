@@ -1,10 +1,11 @@
 const express = require('express')
-const expense = require('./../usecases/expense')
-const authMiddleware = require('./../middlewares/auth')
-
 const router = express.Router()
 
-router.get('/', authMiddleware, async (req, res) => {
+const auth = require('./../middlewares/auth')
+const treasurerAuth = require('./../middlewares/treasurerAuth.js')
+const expense = require('./../usecases/expense')
+
+router.get('/', auth, async (req, res) => {
   try {
     const expenses = await expense.getExpenses()
 
@@ -18,7 +19,7 @@ router.get('/', authMiddleware, async (req, res) => {
   }
 })
 
-router.post('/', authMiddleware, async (req, res) => {
+router.post('/', auth, treasurerAuth, async (req, res) => {
   try {
     const newExpense = await expense.addExpense(req.body)
 
