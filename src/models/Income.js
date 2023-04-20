@@ -24,26 +24,8 @@ const schema = new mongoose.Schema(
       ref: 'House',
       required: true,
     },
-    monthApplied: {
-      enum: [
-        'Ene',
-        'Feb',
-        'Mar',
-        'Abr',
-        'May',
-        'Jun',
-        'Jul',
-        'Ago',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Dic',
-      ],
-      type: String,
-    },
-    receiptNumber: {
-      type: String,
-      match: /^[0-9]+$/,
+    dateApplied: {
+      type: Date,
       required: true,
     },
     isAggregated: {
@@ -51,7 +33,7 @@ const schema = new mongoose.Schema(
       default: false,
       required: true,
     },
-    adminId: {
+    treasurerId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
     },
