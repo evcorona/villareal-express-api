@@ -1,8 +1,7 @@
 const Expense = require('./../models/Expense')
-const userData = require('../utils/userData')
 
-async function addExpense(expenseData) {
-  return await Expense.create({ ...expenseData, treasurerID: userData.id })
+async function addExpense(userId, expenseData) {
+  return await Expense.create({ ...expenseData, treasurerID: userId })
 }
 
 async function getExpenses() {

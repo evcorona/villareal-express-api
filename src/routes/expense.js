@@ -4,6 +4,7 @@ const router = express.Router()
 const auth = require('./../middlewares/auth')
 const treasurerAuth = require('./../middlewares/treasurerAuth.js')
 const expense = require('./../usecases/expense')
+const userData = require('../utils/userData')
 
 router.get('/', auth, async (req, res) => {
   try {
@@ -21,7 +22,8 @@ router.get('/', auth, async (req, res) => {
 
 router.post('/', auth, treasurerAuth, async (req, res) => {
   try {
-    const newExpense = await expense.addExpense(req.body)
+    const { id } = userData(req.headers.authorization)
+    const newExpense = await expense.addExpense(id, req.body)
 
     res.json({
       success: true,
