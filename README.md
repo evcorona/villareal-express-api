@@ -1,6 +1,8 @@
 # REST API
 
 [![CodeFactor](https://www.codefactor.io/repository/github/evcorona/villareal-express-api/badge)](https://www.codefactor.io/repository/github/evcorona/villareal-express-api)
+[![CodeScene Code Health](https://codescene.io/projects/38300/status-badges/code-health)](https://codescene.io/projects/38300)
+[![CodeScene System Mastery](https://codescene.io/projects/38300/status-badges/system-mastery)](https://codescene.io/projects/38300)
 
 ## 🤖 Workflow connection:
 
