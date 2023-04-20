@@ -11,12 +11,12 @@
     "pnpm": "^8.0.0"
   },
   "scripts": {
-    "dev": "nodemon api/index.js",
+    "dev": "nodemon index.js",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint \"{src,apps,libs,test}/**/*.js\"",
     "lint:fix": "eslint \"{src,apps,libs,test}/**/*.js\" --fix",
-    "start": "node api/index.js",
+    "start": "node index.js",
     "test": "NODE_ENV=test jest --testTimeout=5000"
   },
   "dependencies": {

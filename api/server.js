@@ -1,10 +1,10 @@
 const cors = require('cors')
 const express = require('express')
 
-const authRouter = require('./routes/auth')
-const houseRouter = require('./routes/house')
-const expenseRouter = require('./routes/expense')
-const incomeRouter = require('./routes/income')
+const authRouter = require('../src/routes/auth')
+const houseRouter = require('../src/routes/house')
+const expenseRouter = require('../src/routes/expense')
+const incomeRouter = require('../src/routes/income')
 
 // Server configuration
 const server = express()

@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 require('dotenv').config()
 
-const db = require('../src/lib/db')
-const server = require('../src/server')
+const db = require('./src/lib/db')
+const server = require('./api/server')
 
 db.connect
   .then(() =>
