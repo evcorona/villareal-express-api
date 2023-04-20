@@ -8,15 +8,15 @@
   "main": "index.js",
   "engines": {
     "node": "18.16.0",
-    "pnpm": "8.0.0"
+    "pnpm": "^8.0.0"
   },
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "nodemon api/index.js",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint \"{src,apps,libs,test}/**/*.js\"",
     "lint:fix": "eslint \"{src,apps,libs,test}/**/*.js\" --fix",
-    "start": "node index.js",
+    "start": "node api/index.js",
     "test": "NODE_ENV=test jest --testTimeout=5000"
   },
   "dependencies": {

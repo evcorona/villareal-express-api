@@ -21,6 +21,7 @@ server.use('/income', incomeRouter)
 
 // Server response
 server.get('/', (request, response) => {
+  response.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate')
   response.json({ success: true, message: '🚀 Villarreal-express.api' })
 })
 
