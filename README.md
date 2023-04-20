@@ -1,5 +1,7 @@
 # REST API
 
+[![CodeFactor](https://www.codefactor.io/repository/github/evcorona/villareal-express-api/badge)](https://www.codefactor.io/repository/github/evcorona/villareal-express-api)
+
 ## 🤖 Workflow connection:
 
 1. Models
