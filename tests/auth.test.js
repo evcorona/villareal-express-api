@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const request = require('supertest')
 require('dotenv').config()
 
-const app = require('../src/server')
+const app = require('../api/server')
 const { loginAdmin, loginUser } = require('./utils/loginProcess')
 
 const { DB_TEST_URI, TEST_USER, TEST_PASSWORD } = process.env

@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 const request = require('supertest')
-const app = require('../src/server')
+const app = require('../api/server')
 
 describe('GET / ', () => {
   test('Check if the server runs successfully', async () => {
